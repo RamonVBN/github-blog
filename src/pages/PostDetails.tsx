@@ -8,7 +8,7 @@ import { ptBR } from "date-fns/locale"
 import Markdown from "react-markdown"
 import { AxiosError } from "axios"
 
-type IssueProps = {
+type IssueDetailsProps = {
 
     title: string
     issueUrl: string
@@ -24,7 +24,7 @@ export function PostDetails(){
     
     const {issueNumber} = useParams()
 
-    const [issue, setIssue] = useState<IssueProps>({
+    const [issue, setIssue] = useState<IssueDetailsProps>({
         title: '',
         issueUrl: '',
         comments: 0,
@@ -32,8 +32,6 @@ export function PostDetails(){
         username: '',
         createdAt: ''
     })
-
-    console.log(issueNumber)
 
 
     async function fetchIssue(){
@@ -54,7 +52,7 @@ export function PostDetails(){
             if (error instanceof AxiosError) {
                 
                 
-                return navigate('/')
+                return navigate('/github-blog/')
             }
         }
        
@@ -72,7 +70,7 @@ export function PostDetails(){
         <CardHeader>
             <div className="w-full flex flex-col gap-5 ">
                 <div className="w-full flex justify-between">
-                    <NavLink className="flex items-baseline gap-1" to={'/'}>
+                    <NavLink className="flex items-baseline gap-1" to={'/github-blog/'}>
                     <CaretLeft className="text-blue-100" weight="bold" size={12}/>
                     <span className="text-blue-100 font-bold font-display text-[12px] leading-[160%]
                     ">VOLTAR</span>

@@ -10,10 +10,10 @@ export function Router(){
 
    return (<Routes>
 
-        <Route path="/" element={<AppLayout/>}>
+        <Route path="/github-blog/" element={<AppLayout/>}>
 
-            <Route path="/" element={<Blog/>}/>
-            <Route path="/details/:issueNumber" element={<PostDetails/>}/>
+            <Route path="/github-blog/" element={<Blog/>}/>
+            <Route path="/github-blog/details/:issueNumber" element={<PostDetails/>}/>
         </Route>
 
     </Routes>)

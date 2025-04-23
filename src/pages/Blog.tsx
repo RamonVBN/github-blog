@@ -14,6 +14,7 @@ type UserInfos = {
     url: string
 }
 
+
 export function Blog(){
 
     const [profile, setProfile] = useState<UserInfos>({
@@ -29,7 +30,7 @@ export function Blog(){
     
     const [inputQuery, setInputQuery] = useState('')
 
-    const [items, setItems] = useState<any[]>()
+    const [items, setItems] = useState<any[]>([])
     
     async function fetchApiUsers(){
         const response = await api.get('/users/ramonvbn')
