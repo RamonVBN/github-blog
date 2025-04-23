@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+
+@theme {
+
+
+    --color-blue-800: #071422;
+    --color-blue-900:  #040F1A;
+    --color-blue-600: #112131;
+    --color-blue-700: #0B1B2B;
+    --color-white-100: #E7EDF4;
+    --color-white-200: #AFC2D4;
+    --color-white-300: #C4D4E3;
+    --color-cyan-100: #7B96B2;
+    --color-gray-200: #3A536B;
+    --color-blue-100: #3294F8;
+
+    --font-display:"Nunito", sans-serif;
+}
+
+
+.drop-shadow-class {
+    box-shadow: 0px 4px 4px 0px #00000034;
+}
+
+
